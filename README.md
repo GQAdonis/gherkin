@@ -18,6 +18,10 @@ If you want to run [Cucumber] tests in [Rust], try [`cucumber` crate](https://gi
 
 ## GQAdonis fork status
 
+The current [contribution-readiness repair](docs/CONTRIBUTION-READINESS.md) is
+implemented and awaits phase-end behavioral proof; earlier results below are
+historical. No PR has been marked ready or merged on this unverified change.
+
 This fork adds opt-in Gherkin43 dialect, lexical, table and docstring semantics,
 both step argument orders and source-preserving Markdown parsing. The verified
 foundation is preserved at
