@@ -36,8 +36,7 @@ independent behavior acceptance boundary. The paired-site run passed 10 scenario
 64 steps; evidence is retained in the Cucumber fork. It identifies this fork; the additive Pages workflow targets
 [public fork documentation](https://gqadonis.github.io/gherkin/). See
 [deployment status and verification](docs-site/README.md#pages-delivery). The shared native SDK programme lives in Cucumber
-and remains proposed. Final independent review and corrections precede upstream
-issues/PRs. Established build/release processes remain unchanged.
+has completed its first installed-native phase (22 scenarios/66 steps); foreign execution and framework adapters remain future work. See [reflection and contribution limits](docs/CONTRIBUTION-REFLECTION.md). Draft upstream contributions are authorized, without a full-parity or whole-codebase-clean claim. Established build/release processes remain unchanged.
 
 ## Usage
 
