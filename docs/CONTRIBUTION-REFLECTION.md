@@ -13,3 +13,5 @@ Upstream draft retains production files, official fixture/license provenance, fo
 The shared native SDK46 in Cucumber is delivered and locally proven22/66; foreign step execution/framework adapters remain future scope. Both documentation sites are live and the public paired-site boundary passed4/22. Established build/release processes remain unchanged.
 
 No KBD canonical project/run exists in this Gherkin repository; this is an authored project reflection linked to the Cucumber programme, not a fabricated canonical stage. The consuming phase46 has a supported run-global reflection supplement; its immutable closed-phase limitation remains explicit.
+
+[Verified proposal and draft PR routes](CONTRIBUTION-DELIVERY.md) are now recorded; all remain draft and unmerged.
