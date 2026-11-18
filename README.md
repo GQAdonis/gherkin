@@ -33,8 +33,9 @@ This is bounded evidence, not universal conformance.
 
 An additive [Docusaurus site](docs-site/README.md) now has local source and an
 independent behavior acceptance boundary. The paired-site run passed 10 scenarios /
-64 steps; evidence is retained in the Cucumber fork. It identifies this fork and
-is not deployed. The shared native SDK programme lives in Cucumber
+64 steps; evidence is retained in the Cucumber fork. It identifies this fork; the additive Pages workflow targets
+[public fork documentation](https://gqadonis.github.io/gherkin/). See
+[deployment status and verification](docs-site/README.md#pages-delivery). The shared native SDK programme lives in Cucumber
 and remains proposed. Final independent review and corrections precede upstream
 issues/PRs. Established build/release processes remain unchanged.
 

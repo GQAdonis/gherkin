@@ -1,4 +1,4 @@
-// Additive local documentation; no deployment workflow or public host implied.
+// Additive fork documentation; Pages supplies its explicit origin and repository path.
 const baseUrl = process.env.DOCS_BASE_URL || '/';
 if (!baseUrl.startsWith('/') || !baseUrl.endsWith('/')) {
   throw new Error('DOCS_BASE_URL must start and end with /');
