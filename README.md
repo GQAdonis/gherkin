@@ -16,6 +16,26 @@ If you want to run [Cucumber] tests in [Rust], try [`cucumber` crate](https://gi
 
 
 
+## GQAdonis fork status
+
+This fork adds opt-in Gherkin43 dialect, lexical, table and docstring semantics,
+both step argument orders and source-preserving Markdown parsing. The verified
+foundation is preserved at
+[efb91e8](https://github.com/GQAdonis/gherkin/commit/efb91e8bb5a7d59a717f88c05d1c06ec5d06a819)
+on foundation/rust-bdd-sdk. It is not a published crates.io release.
+
+See [corpus coverage](docs/gherkin43-corpus.md),
+[dialect policy](docs/gherkin43-dialects.md) and
+[Markdown API](docs/gherkin43-markdown.md). The latest focused sibling BDD run
+passed 73 scenarios/241 steps on Rust1.88;
+[evidence is retained in the consuming fork](https://github.com/GQAdonis/cucumber/blob/6e4753fc0783038bb388de1b4d76055edc697b8f/docs/compatibility/evidence/phase45-parser-affected-bdd.log).
+This is bounded evidence, not universal conformance.
+
+An additive Docusaurus site is planned and will identify this fork; no site
+exists or has been deployed. The shared native SDK programme lives in Cucumber
+and remains proposed. Final independent review and corrections precede upstream
+issues/PRs. Established build/release processes remain unchanged.
+
 ## Usage
 
 ```toml
