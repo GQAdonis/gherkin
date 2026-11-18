@@ -31,16 +31,22 @@ passed 73 scenarios/241 steps on Rust1.88;
 [evidence is retained in the consuming fork](https://github.com/GQAdonis/cucumber/blob/6e4753fc0783038bb388de1b4d76055edc697b8f/docs/compatibility/evidence/phase45-parser-affected-bdd.log).
 This is bounded evidence, not universal conformance.
 
-An additive Docusaurus site is planned and will identify this fork; no site
-exists or has been deployed. The shared native SDK programme lives in Cucumber
+An additive [Docusaurus site](docs-site/README.md) now has local source and an
+independent behavior acceptance boundary. The paired-site run passed 10 scenarios /
+64 steps; evidence is retained in the Cucumber fork. It identifies this fork and
+is not deployed. The shared native SDK programme lives in Cucumber
 and remains proposed. Final independent review and corrections precede upstream
 issues/PRs. Established build/release processes remain unchanged.
 
 ## Usage
 
+For the fork behavior described above, use the complete pinned checkout from
+[Getting started](docs-site/docs/getting-started.md). The registry package does
+not contain these unpublished changes.
+
 ```toml
 [dependencies]
-gherkin = "0.15"
+gherkin = { path = "../gherkin" }
 ```
 
 

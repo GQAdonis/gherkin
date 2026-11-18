@@ -1,0 +1,49 @@
+/* Original fork styling. Palette reference: cucumber/website custom.scss.
+   Darker link green preserves contrast on the light background. No logo copied. */
+:root {
+  --fork-green: #00a818;
+  --fork-green-soft: #39b54a;
+  --ifm-color-primary: #087f23;
+  --ifm-color-primary-dark: #077220;
+  --ifm-color-primary-darker: #076c1e;
+  --ifm-color-primary-darkest: #065919;
+  --ifm-color-primary-light: #098c27;
+  --ifm-color-primary-lighter: #099229;
+  --ifm-color-primary-lightest: #0aa62e;
+  --ifm-background-color: #fcfdfb;
+  --ifm-font-family-base: 'Lato', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-font-size-base: 17px;
+  --ifm-line-height-base: 1.7;
+  --ifm-code-font-size: 90%;
+  --ifm-navbar-shadow: 0 1px 0 #dce6dc;
+  --ifm-footer-background-color: #f0f5ef;
+  --ifm-global-radius: 0.5rem;
+}
+[data-theme='dark'] {
+  --ifm-color-primary: #71d886;
+  --ifm-color-primary-dark: #54d06d;
+  --ifm-color-primary-darker: #46cc61;
+  --ifm-color-primary-darkest: #2bb548;
+  --ifm-color-primary-light: #8ee09f;
+  --ifm-color-primary-lighter: #9ce4ab;
+  --ifm-color-primary-lightest: #c7efd0;
+  --ifm-background-color: #131b16;
+  --ifm-background-surface-color: #1c2820;
+  --ifm-footer-background-color: #18231c;
+}
+.navbar__title { letter-spacing: -0.025em; }
+.navbar__brand { border-left: 4px solid var(--fork-green); padding-left: 0.75rem; }
+.markdown h1 { letter-spacing: -0.04em; line-height: 1.15; margin-bottom: 1.5rem; }
+.markdown h2 { letter-spacing: -0.025em; margin-top: 2.5rem; }
+.markdown > p:first-of-type { font-size: 1.12rem; }
+.markdown a { text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+.markdown table { font-size: 0.94rem; }
+.footer { border-top: 1px solid var(--ifm-color-emphasis-200); }
+.footer__copyright { max-width: 50rem; margin: 1.5rem auto 0; font-size: 0.85rem; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--ifm-color-primary); outline-offset: 3px; }
+@media (max-width: 996px) {
+  :root { --ifm-font-size-base: 16px; }
+  .markdown h1 { font-size: 2.2rem; }
+  .navbar__title { font-size: 0.95rem; }
+}
