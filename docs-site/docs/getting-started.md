@@ -21,7 +21,9 @@ For an application in a sibling directory, use the full checkout as a path depen
 gherkin = { path = "../gherkin" }
 ```
 
-The default `parser` feature enables the parsing APIs. Explicitly select the adopted language policies:
+## Parse one scenario
+
+The library-hold example shows why you might inspect a scenario. Here use the pinned [minimal-example fixture](https://github.com/GQAdonis/gherkin/blob/efb91e8bb5a7d59a717f88c05d1c06ec5d06a819/tests/fixtures/data/good/minimal-example.feature), with its retained [reference AST](https://github.com/GQAdonis/gherkin/blob/efb91e8bb5a7d59a717f88c05d1c06ec5d06a819/tests/fixtures/data/good/minimal-example.feature.ast.ndjson). Put this in `src/main.rs`; the default `parser` feature enables these APIs.
 
 ```rust
 use gherkin::{
@@ -35,17 +37,22 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .with_table_semantics(TableSemantics::Gherkin43)
         .with_lexical_semantics(LexicalSemantics::Gherkin43);
 
-    let source = r#"Feature: Reusable specification
-  Scenario: Preserve a step
-    Given a native parser
+    let source = r#"Feature: Minimal
+
+  Example: minimalistic
+    Given the minimalism
 "#;
     let document = Document::parse(source, env)?;
-    if let Some(feature) = document.feature {
-        println!("{}", feature.name);
-    }
+    let feature = document.feature.expect("the fixture contains a feature");
+    let scenario = &feature.scenarios[0];
+    println!("{} / {} / {}", feature.name, scenario.name, scenario.steps[0].value);
     Ok(())
 }
 ```
+
+Run `cargo run` from the application root. This example should print `Minimal / minimalistic / the minimalism`. Those are parsed names and step text, not a passed execution. To test the library hold, supply Rust step definitions to [Cucumber](https://gqadonis.github.io/cucumber/getting-started/). If parsing fails, check the selected language and whether the input is classic Gherkin or Markdown; use the Markdown-specific API below when applicable.
+
+## Choose syntax policies
 
 `new_latest` selects the Gherkin43 vocabulary only. The three builders select docstring, table and lexical behavior independently; omitting them retains their legacy defaults. See the [actual environment API](https://github.com/GQAdonis/gherkin/blob/efb91e8bb5a7d59a717f88c05d1c06ec5d06a819/src/parser.rs) and [Document implementation](https://github.com/GQAdonis/gherkin/blob/efb91e8bb5a7d59a717f88c05d1c06ec5d06a819/src/lib.rs).
 
