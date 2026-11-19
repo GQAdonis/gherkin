@@ -16,11 +16,43 @@ If you want to run [Cucumber] tests in [Rust], try [`cucumber` crate](https://gi
 
 
 
+## GQAdonis fork status
+
+The current [contribution-readiness repair](docs/CONTRIBUTION-READINESS.md) is
+verified for the affected parser component: fresh73 scenarios/241 steps plus
+three behavior/control pairs (18 outer steps) passed. An internal independent
+review found no material component blocker; shared Cucumber phase closure and
+merge readiness are separate. See the linked receipts and limitations.
+
+This fork adds opt-in Gherkin43 dialect, lexical, table and docstring semantics,
+both step argument orders and source-preserving Markdown parsing. The verified
+foundation is preserved at
+[efb91e8](https://github.com/GQAdonis/gherkin/commit/efb91e8bb5a7d59a717f88c05d1c06ec5d06a819)
+on foundation/rust-bdd-sdk. It is not a published crates.io release.
+
+See [corpus coverage](docs/gherkin43-corpus.md),
+[dialect policy](docs/gherkin43-dialects.md) and
+[Markdown API](docs/gherkin43-markdown.md). The fresh focused sibling BDD run
+passed73 scenarios/241 steps on Rust1.88;
+[evidence is retained here](docs/evidence/readiness47-parser/0001-stdout.txt).
+This is bounded evidence, not universal conformance.
+
+An additive [Docusaurus site](docs-site/README.md) now has local source and an
+independent behavior acceptance boundary. The paired-site run passed 10 scenarios /
+64 steps; evidence is retained in the Cucumber fork. It identifies this fork; the additive Pages workflow targets
+[public fork documentation](https://gqadonis.github.io/gherkin/). See
+[deployment status and verification](docs-site/README.md#pages-delivery). The shared native SDK programme lives in Cucumber
+has completed its first installed-native phase (22 scenarios/66 steps); foreign execution and framework adapters remain future work. See [reflection and contribution limits](docs/CONTRIBUTION-REFLECTION.md). The existing upstream contribution is available for review, without a full-parity or whole-codebase-clean claim. Established build/release processes remain unchanged.
+
 ## Usage
+
+For the fork behavior described above, use the complete pinned checkout from
+[Getting started](docs-site/docs/getting-started.md). The registry package does
+not contain these unpublished changes.
 
 ```toml
 [dependencies]
-gherkin = "0.15"
+gherkin = { path = "../gherkin" }
 ```
 
 
